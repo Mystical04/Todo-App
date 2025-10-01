@@ -3,6 +3,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
   const {toggleDarkMode} = useTheme();
+
+  
   return (
     <View style={styles.container}>
       <Text style={styles.content}>Edit app/index.tsx to edit this screen.</Text>
