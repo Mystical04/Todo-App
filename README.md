@@ -8,15 +8,15 @@ It serves as my first hands-on experience developing a full-stack application wi
 The React Todo App allows users to:
 
 ✅ Add new tasks <br>
-✅ Edit existing tasks
-✅ Delete completed or unwanted tasks
+✅ Edit existing tasks <br>
+✅ Delete completed or unwanted tasks <br>
 ✅ Store and retrieve todos in real-time using Convex
 
 This project was developed primarily for learning purposes, focusing on understanding:
 
-✅ React fundamentals (components, hooks, and state management)
-✅ Database integration with Convex
-✅ Real-time data synchronization
+✅ React fundamentals (components, hooks, and state management) <br>
+✅ Database integration with Convex <br>
+✅ Real-time data synchronization <br>
 
 🧩 Tech Stack
 
@@ -28,18 +28,18 @@ Language: TypeScript / JavaScript
 
 📦 Features
 
-✅ Add and manage your daily tasks easily
-✅ Automatically sync data in real-time
-✅ Simple and clean UI design
-✅ Lightweight and fast setup
+✅ Add and manage your daily tasks easily <br>
+✅ Automatically sync data in real-time <br>
+✅ Simple and clean UI design <br>
+✅ Lightweight and fast setup <br>
 
 💡 Learning Goals
 
 This project helped me:
 
-✅ Understand how to use React for building modern user interfaces 
-✅ Learn how Convex handles backend logic and data persistence
-✅ Explore the flow between frontend components and backend functions
+✅ Understand how to use React for building modern user interfaces <br>
+✅ Learn how Convex handles backend logic and data persistence <br>
+✅ Explore the flow between frontend components and backend functions <br>
 
 🙏 Credits
 
