@@ -1,61 +1,90 @@
-📝 React Todo Application (with Convex Database)
+# Welcome to your Convex functions directory!
 
-This project is a Todo Application built using React and Convex as the backend database.
-It serves as my first hands-on experience developing a full-stack application with React and integrating it with a real-time database using Convex.
+Write your Convex functions here.
+See https://docs.convex.dev/functions for more.
 
-🚀 About the Project
+A query function that takes two arguments looks like:
 
-The React Todo App allows users to:
+```ts
+// convex/myFunctions.ts
+import { query } from "./_generated/server";
+import { v } from "convex/values";
 
-✅ Add new tasks
+export const myQueryFunction = query({
+  // Validators for arguments.
+  args: {
+    first: v.number(),
+    second: v.string(),
+  },
 
-✅ Edit existing tasks
+  // Function implementation.
+  handler: async (ctx, args) => {
+    // Read the database as many times as you need here.
+    // See https://docs.convex.dev/database/reading-data.
+    const documents = await ctx.db.query("tablename").collect();
 
-✅ Delete completed or unwanted tasks
+    // Arguments passed from the client are properties of the args object.
+    console.log(args.first, args.second);
 
-✅ Store and retrieve todos in real-time using Convex
+    // Write arbitrary JavaScript here: filter, aggregate, build derived data,
+    // remove non-public properties, or create new objects.
+    return documents;
+  },
+});
+```
 
-This project was developed primarily for learning purposes, focusing on understanding:
+Using this query function in a React component looks like:
 
-✅ React fundamentals (components, hooks, and state management)
+```ts
+const data = useQuery(api.myFunctions.myQueryFunction, {
+  first: 10,
+  second: "hello",
+});
+```
 
-✅ Database integration with Convex
+A mutation function looks like:
 
-✅ Real-time data synchronization
+```ts
+// convex/myFunctions.ts
+import { mutation } from "./_generated/server";
+import { v } from "convex/values";
 
-🧩 Tech Stack
+export const myMutationFunction = mutation({
+  // Validators for arguments.
+  args: {
+    first: v.string(),
+    second: v.string(),
+  },
 
-Frontend: React (with Vite or Create React App)
+  // Function implementation.
+  handler: async (ctx, args) => {
+    // Insert or modify documents in the database here.
+    // Mutations can also read from the database like queries.
+    // See https://docs.convex.dev/database/writing-data.
+    const message = { body: args.first, author: args.second };
+    const id = await ctx.db.insert("messages", message);
 
-Backend / Database: Convex
+    // Optionally, return a value from your mutation.
+    return await ctx.db.get(id);
+  },
+});
+```
 
-Language: TypeScript / JavaScript
+Using this mutation function in a React component looks like:
 
-📦 Features
+```ts
+const mutation = useMutation(api.myFunctions.myMutationFunction);
+function handleButtonPress() {
+  // fire and forget, the most common way to use mutations
+  mutation({ first: "Hello!", second: "me" });
+  // OR
+  // use the result once the mutation has completed
+  mutation({ first: "Hello!", second: "me" }).then((result) =>
+    console.log(result),
+  );
+}
+```
 
-✅ Add and manage your daily tasks easily
-✅ Automatically sync data in real-time
-✅ Simple and clean UI design
-✅ Lightweight and fast setup
-
-💡 Learning Goals
-
-This project helped me:
-
-Understand how to use React for building modern user interfaces
-
-Learn how Convex handles backend logic and data persistence
-
-Explore the flow between frontend components and backend functions
-
-🙏 Credits
-
-This project is inspired by and adapted from the works of:
-
-🎥 Codesistency
- — for the original tutorial and clear explanations.
-
-💻 burakokmez
- — for the original source code on GitHub.
-
-I’d like to express my appreciation to both for sharing their knowledge and code publicly, which helped me understand how to build this project.
+Use the Convex CLI to push your functions to a deployment. See everything
+the Convex CLI can do by running `npx convex -h` in your project root
+directory. To learn more, launch the docs with `npx convex docs`.
