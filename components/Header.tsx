@@ -12,7 +12,7 @@ const Header = () => {
 
     const {colors} = useTheme();
 
-    const homeStyles = createHomeStyles(colors)
+    const homeStyles = createHomeStyles(colors);
 
     const todos = useQuery(api.todos.getTodos);
 
