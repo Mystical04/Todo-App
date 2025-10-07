@@ -79,3 +79,9 @@ npx convex dev
 ```ts
 npx expo
 ```
+
+
+🧠 Notes
+
+This is a practice project, not an original creation.
+It was developed to learn React and Convex integration and to understand how full-stack apps communicate between frontend and backend in real-time.
