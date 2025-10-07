@@ -7,7 +7,7 @@ It serves as my first hands-on experience developing a full-stack application wi
 
 The React Todo App allows users to:
 
-✅ Add new tasks
+✅ Add new tasks <br>
 ✅ Edit existing tasks
 ✅ Delete completed or unwanted tasks
 ✅ Store and retrieve todos in real-time using Convex
@@ -37,7 +37,7 @@ Language: TypeScript / JavaScript
 
 This project helped me:
 
-✅ Understand how to use React for building modern user interfaces
+✅ Understand how to use React for building modern user interfaces 
 ✅ Learn how Convex handles backend logic and data persistence
 ✅ Explore the flow between frontend components and backend functions
 
