@@ -1,50 +1,81 @@
-# Welcome to your Expo app 👋
+📝 React Todo Application (with Convex Database)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a Todo Application built using React and Convex as the backend database.
+It serves as my first hands-on experience developing a full-stack application with React and integrating it with a real-time database using Convex.
 
-## Get started
+🚀 About the Project
 
-1. Install dependencies
+The React Todo App allows users to:
 
-   ```bash
-   npm install
-   ```
+✅ Add new tasks
+✅ Edit existing tasks
+✅ Delete completed or unwanted tasks
+✅ Store and retrieve todos in real-time using Convex
 
-2. Start the app
+This project was developed primarily for learning purposes, focusing on understanding:
 
-   ```bash
-   npx expo start
-   ```
+✅ React fundamentals (components, hooks, and state management)
+✅ Database integration with Convex
+✅ Real-time data synchronization
 
-In the output, you'll find options to open the app in a
+🧩 Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Frontend: React (with Vite or Create React App)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Backend / Database: Convex
 
-## Get a fresh project
+Language: TypeScript / JavaScript
 
-When you're ready, run:
+📦 Features
 
-```bash
-npm run reset-project
+✅ Add and manage your daily tasks easily
+✅ Automatically sync data in real-time
+✅ Simple and clean UI design
+✅ Lightweight and fast setup
+
+💡 Learning Goals
+
+This project helped me:
+
+✅ Understand how to use React for building modern user interfaces
+✅ Learn how Convex handles backend logic and data persistence
+✅ Explore the flow between frontend components and backend functions
+
+🙏 Credits
+
+This project is inspired by and adapted from the works of:
+
+🎥 Codesistency
+ — for the original tutorial and clear explanations.
+
+💻 burakokmez
+ — for the original source code on GitHub.
+
+I’d like to express my appreciation to both for sharing their knowledge and code publicly, which helped me understand how to build this project.
+
+
+⚙️ Getting Started
+
+1) Clone the repository
+
+```ts
+git clone https://github.com/yourusername/todo-app-convex.git
+cd todo-app-convex
+```
+2) Install dependencies
+
+```ts
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3) Run the Convex backend
 
-## Learn more
+```ts
+npx convex dev
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4) Start the React app
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```ts
+npx expo
+```
