@@ -5,7 +5,7 @@ It serves as my first hands-on experience developing a full-stack application wi
 
 🚀 About the Project 
 
-The React Todo App allows users to:
+The React Todo App allows users to
 
 ✅ Add new tasks <br>
 ✅ Edit existing tasks <br>
