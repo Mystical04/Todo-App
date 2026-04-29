@@ -3,7 +3,7 @@
 This project is a Todo Application built using React and Convex as the backend database.
 It serves as my first hands-on experience developing a full-stack application with React and integrating it with a real-time database using Convex.
 
-🚀 About the Project
+🚀 About the Project 
 
 The React Todo App allows users to:
 
